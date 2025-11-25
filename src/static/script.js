@@ -18,15 +18,10 @@ document.addEventListener('DOMContentLoaded', () => {
             datasets: [{
                 label: 'Sentiment Score',
                 data: [],
-                borderColor: '#ff0040',
-                backgroundColor: 'rgba(255, 0, 64, 0.2)',
+                borderColor: '#4f46e5',
+                backgroundColor: 'rgba(79, 70, 229, 0.1)',
                 tension: 0.4,
-                fill: true,
-                pointBackgroundColor: '#ffcc00',
-                pointBorderColor: '#ff0040',
-                pointBorderWidth: 3,
-                pointRadius: 6,
-                pointHoverRadius: 8
+                fill: true
             }]
         },
         options: {
