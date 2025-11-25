@@ -4,6 +4,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const sendBtn = document.getElementById('send-btn');
     const endChatBtn = document.getElementById('end-chat-btn');
     const themeToggle = document.getElementById('theme-toggle');
+    const chartToggleBtn = document.getElementById('chart-toggle-btn');
+    const chartPanel = document.getElementById('chart-panel');
+    const closeChartBtn = document.getElementById('close-chart-btn');
     const modal = document.getElementById('summary-modal');
     const closeModalBtn = document.getElementById('close-modal-btn');
 
@@ -50,6 +53,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
         sentimentChart.options.scales.y.grid.color = isDark ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)';
         sentimentChart.update();
+    });
+
+    chartToggleBtn.addEventListener('click', () => {
+        chartPanel.classList.toggle('hidden');
+        chartToggleBtn.textContent = chartPanel.classList.contains('hidden') ? '📈 Trend' : 'Hide Trend';
+    });
+
+    closeChartBtn.addEventListener('click', () => {
+        chartPanel.classList.add('hidden');
+        chartToggleBtn.textContent = '📈 Trend';
     });
 
     userInput.addEventListener('keypress', (e) => {
