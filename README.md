@@ -83,7 +83,7 @@ This is a Python-based chatbot that performs sentiment analysis on user conversa
 
 ## Tier Status
 
-- **Tier 1** ✔️ Implemented (conversation summary endpoint + UI/CLI modal).
+- **Tier 1**  Implemented (conversation summary endpoint + UI/CLI modal).
 - **Tier 2** ✔️ Implemented (per message sentiment labels, chart, API responses).
 - **Enhancements**: Mood trend summary, optional CLI mode, live visualization, dark mode, typing indicators.
 
