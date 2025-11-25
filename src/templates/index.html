@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Chatbot</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Sentiment Chatbot</h1>
+            <div class="header-controls">
+                <button id="theme-toggle" class="icon-btn" title="Toggle Dark Mode">🌙</button>
+                <button id="end-chat-btn" class="secondary-btn">End Conversation</button>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <div id="chat-box" class="chat-box">
+                <!-- Messages will appear here -->
+            </div>
+            <div class="chart-container">
+                <canvas id="sentimentChart"></canvas>
+            </div>
+        </div>
+
+        <div class="input-area">
+            <input type="text" id="user-input" placeholder="Type your message..." autocomplete="off">
+            <button id="send-btn" class="primary-btn">Send</button>
+        </div>
+    </div>
+
+    <!-- Summary Modal -->
+    <div id="summary-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Conversation Summary</h2>
+            <div id="summary-details">
+                <p><strong>Overall Sentiment:</strong> <span id="summary-sentiment"></span></p>
+                <p><strong>Direction:</strong> <span id="summary-direction"></span></p>
+                <p><strong>Trend:</strong> <span id="summary-trend"></span></p>
+                <p><strong>Average Score:</strong> <span id="summary-score"></span></p>
+            </div>
+            <button id="close-modal-btn" class="primary-btn">Close</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/static/script.js"></script>
+</body>
+
+</html>
