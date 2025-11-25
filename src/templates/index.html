@@ -14,6 +14,7 @@
         <header>
             <h1>Sentiment Chatbot</h1>
             <div class="header-controls">
+                <button id="chart-toggle-btn" class="secondary-btn">📈 Trend</button>
                 <button id="theme-toggle" class="icon-btn" title="Toggle Dark Mode">🌙</button>
                 <button id="end-chat-btn" class="secondary-btn">End Conversation</button>
             </div>
@@ -22,9 +23,6 @@
         <div class="main-content">
             <div id="chat-box" class="chat-box">
                 <!-- Messages will appear here -->
-            </div>
-            <div class="chart-container">
-                <canvas id="sentimentChart"></canvas>
             </div>
         </div>
 
@@ -46,6 +44,14 @@
             </div>
             <button id="close-modal-btn" class="primary-btn">Close</button>
         </div>
+    </div>
+
+    <div id="chart-panel" class="chart-panel hidden">
+        <div class="chart-panel-header">
+            <h3>Sentiment Trend</h3>
+            <button id="close-chart-btn" class="icon-btn" title="Hide Trend">✕</button>
+        </div>
+        <canvas id="sentimentChart"></canvas>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
